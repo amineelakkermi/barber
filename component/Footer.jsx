@@ -6,9 +6,14 @@ import { FiMail, FiPhone } from "react-icons/fi";
 
 const Footer = () => {
   const scrollToSection = (id) => {
-    if (typeof window === "undefined") return;
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    // Remove any leading slash or hash
+    const cleanId = id.replace(/^[\/#]+/, '');
+    const el = document.getElementById(cleanId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.warn(`Element not found: ${id}`);
+    }
   };
 
 
@@ -104,7 +109,16 @@ const Footer = () => {
             <ul className="space-y-3 text-[17px] font-normal">
               {links.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="text-white/80 hover:text-white">{t[l.key]}</a>
+                  <a 
+                    href={l.href} 
+                    className="text-white/80 hover:text-white cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(l.href);
+                    }}
+                  >
+                    {t[l.key]}
+                  </a>
                 </li>
               ))}
             </ul>
