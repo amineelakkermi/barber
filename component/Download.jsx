@@ -30,7 +30,7 @@ export default function Download({ lang = "ar" }) {
       id="download"
       className={`${styles.padding} flex justify-center items-center`}
     >
-      {/* ====== Container avec backgrounds ====== */}
+      {/* Container */}
       <div className="relative w-full max-w-[1250px] flex flex-col gap-5
       justify-center items-center text-center rounded-[40px]
       bg-[#202641] px-6 py-12 md:px-12 lg:py-16
@@ -49,7 +49,7 @@ export default function Download({ lang = "ar" }) {
 
        
 
-        {/* Shape Right */}
+        {/* Shape */}
         <div
           className="absolute z-20"
           style={{
@@ -64,12 +64,12 @@ export default function Download({ lang = "ar" }) {
           }}
         />
 
-        {/* ====== محتوى النصوص والأزرار ====== */}
+        {/* Title && Text */}
         <h1 className={`${styles.title} max-w-[650px] text-white`}>{t.title}</h1>
         <p className={`${styles.paragraph} max-w-[650px] text-white`}>{t.p1}</p>
         <p className={`${styles.paragraph} max-w-[650px] text-white`}>{t.p2}</p>
 
-        {/* أزرار التحميل */}
+        {/* Download Buttons */}
         <div className="flex gap-4 flex-wrap justify-center">
           <a
             href="#"

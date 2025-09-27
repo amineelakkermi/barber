@@ -6,6 +6,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 import styles from "@/styles/style";
 import { useLanguage } from "./LanguageProvider";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,15 +21,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (typeof document === "undefined") return;
-    const original = document.body.style.overflow;
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = original || "";
-    }
-    return () => {
-      document.body.style.overflow = original || "";
-    };
+  
   }, [isOpen]);
 
   useEffect(() => {
@@ -116,7 +109,7 @@ export default function Navbar() {
     <header
       className={`fixed w-full flex justify-center items-center max-h-[80px] z-50 transition-all duration-300 ${styles.padding} ${
         isScrolled ? "shadow-md bg-[#202641] backdrop-blur" : "bg-transparent"
-      }`}
+      } overflow-visible`}
     >
       <div className="container max-w-7xl mx-auto">
         {/* Desktop */}
@@ -231,11 +224,11 @@ export default function Navbar() {
           {isOpen && (
             <div className="fixed inset-0 z-[9999]">
               <div
-                className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                className="fixed inset-0 bg-black/50"
                 onClick={() => setIsOpen(false)}
                 aria-hidden="true"
               />
-              <div className="absolute right-0 top-0 h-full w-full max-w-md bg-[#0f1a3a] border-l border-white/10 p-6 shadow-2xl">
+              <div className="fixed right-0 top-0 h-screen w-80 max-w-[85vw] bg-[#202641] border-l border-white/10 p-6 shadow-2xl overflow-y-auto">
                 <div className="flex items-center justify-between w-full">
                   <a
                     href="#hero"
