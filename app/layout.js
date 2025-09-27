@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Footer from "../Component/Footer";
+import Footer from "../component/Footer";
 
 export const metadata = {
   title: "BarberApp",

@@ -5,7 +5,6 @@ import logo from "../public/images/logo.png";
 import { FiMail, FiPhone } from "react-icons/fi";
 
 const Footer = () => {
-  // Helper: smooth scroll to section id
   const scrollToSection = (id) => {
     if (typeof window === "undefined") return;
     const el = document.getElementById(id);
