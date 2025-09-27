@@ -272,30 +272,7 @@ export default function Navbar() {
                     ))}
                   </div>
                   
-                  {/* Mobile Action Buttons */}
-                  <div className="mt-8 space-y-3">
-                    <button
-                      className="w-full rounded-full px-6 py-3 text-[16px] font-bold text-center"
-                      style={{ backgroundColor: "#E1BD80", color: "#1E1E1E" }}
-                      onClick={() => {
-                        scrollToSection("download");
-                        setIsOpen(false);
-                      }}
-                    >
-                      {t.downloadBtn}
-                    </button>
-                    
-                    <button
-                      onClick={() => {
-                        toggleLanguage();
-                        setIsOpen(false);
-                      }}
-                      className="w-full rounded-full px-6 py-3 text-[14px] font-bold border border-white/30 text-white hover:bg-white/10 transition-colors"
-                      aria-label={lang === "ar" ? "تغيير اللغة" : "Change language"}
-                    >
-                      {lang === "ar" ? "English" : "العربية"}
-                    </button>
-                  </div>
+                
                 </nav>
               </div>
             </div>
