@@ -1,6 +1,4 @@
-"use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import mockup1 from "../public/images/mockup1.png";
 import mockup2 from "../public/images/mockup2.png";
 import playStore from "../public/images/playStore.svg";
@@ -9,21 +7,7 @@ import arrowTitle from "../public/images/arrowTitle.png";
 import arrowDownload from "../public/images/arrowDownload.svg";
 import styles, { layout } from "@/styles/style";
 
-export default function Hero() {
-  const [lang, setLang] = useState("ar");
-
-  // Initialize lang from localStorage and listen to language changes
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("lang");
-    if (stored === "ar" || stored === "en") setLang(stored);
-
-    const onLangChange = (e) => {
-      if (e?.detail?.lang) setLang(e.detail.lang);
-    };
-    window.addEventListener("languageChange", onLangChange);
-    return () => window.removeEventListener("languageChange", onLangChange);
-  }, []);
+export default function Hero({ lang = "ar" }) {
 
   const t =
     lang === "en"

@@ -1,6 +1,4 @@
-"use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import mockup3 from "../public/images/mockup3.png";
 import starIcon from "../public/images/starIcon.png";
 import truckIcon from "../public/images/truckIcon.png";
@@ -47,21 +45,7 @@ function FeatureCard({ icon, title, text }) {
   );
 }
 
-export default function FeaturesClient() {
-  const [lang, setLang] = useState("ar");
-
-  // Initialize language and listen for changes from Navbar
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("lang");
-    if (stored === "ar" || stored === "en") setLang(stored);
-
-    const onLangChange = (e) => {
-      if (e?.detail?.lang) setLang(e.detail.lang);
-    };
-    window.addEventListener("languageChange", onLangChange);
-    return () => window.removeEventListener("languageChange", onLangChange);
-  }, []);
+export default function FeaturesClient({ lang = "ar" }) {
 
   const t =
     lang === "en"

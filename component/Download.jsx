@@ -7,21 +7,10 @@ import playStore2 from "../public/images/playStore2.png";
 import textureBg from "../public/images/textureBg.png";
 import styles from "@/styles/style";
 
-const Download = () => {
-  const [lang, setLang] = useState("ar");
 
-  // Initialize language and listen for changes from Navbar
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("lang");
-    if (stored === "ar" || stored === "en") setLang(stored);
-
-    const onLangChange = (e) => {
-      if (e?.detail?.lang) setLang(e.detail.lang);
-    };
-    window.addEventListener("languageChange", onLangChange);
-    return () => window.removeEventListener("languageChange", onLangChange);
-  }, []);
+export default function Download({ lang = "ar" }) {
+  
+ 
 
   const t =
     lang === "en"
@@ -109,4 +98,3 @@ const Download = () => {
   );
 };
 
-export default Download;

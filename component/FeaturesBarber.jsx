@@ -47,21 +47,9 @@ function FeatureCard({ icon, title, text }) {
   );
 }
 
-export default function FeaturesBarber() {
-  const [lang, setLang] = useState("ar");
+export default function FeaturesBarber({ lang = "ar" }) {
 
-  // Initialize language and listen for changes from Navbar
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("lang");
-    if (stored === "ar" || stored === "en") setLang(stored);
-
-    const onLangChange = (e) => {
-      if (e?.detail?.lang) setLang(e.detail.lang);
-    };
-    window.addEventListener("languageChange", onLangChange);
-    return () => window.removeEventListener("languageChange", onLangChange);
-  }, []);
+ 
 
   const t =
     lang === "en"

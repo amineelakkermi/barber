@@ -4,12 +4,13 @@ import Image from "next/image";
 import logo from "../public/images/logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
 import styles from "@/styles/style";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-  const [lang, setLang] = useState("ar");
+  const { lang, changeLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 60);
@@ -17,7 +18,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock background scroll when mobile menu is open
   useEffect(() => {
     if (typeof document === "undefined") return;
     const original = document.body.style.overflow;
@@ -30,17 +30,6 @@ export default function Navbar() {
       document.body.style.overflow = original || "";
     };
   }, [isOpen]);
-
-  // Initialize language from localStorage
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("lang");
-    if (stored === "ar" || stored === "en") {
-      setLang(stored);
-    } else {
-      setLang("ar");
-    }
-  }, []);
 
   // Apply text direction based on language
   useEffect(() => {
@@ -123,12 +112,7 @@ export default function Navbar() {
 
   const toggleLanguage = () => {
     const next = lang === "ar" ? "en" : "ar";
-    setLang(next);
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem("lang", next);
-      // Emit a custom event so the rest of the app can react if needed
-      window.dispatchEvent(new CustomEvent("languageChange", { detail: { lang: next } }));
-    }
+    changeLanguage(next);
   };
 
   return (
