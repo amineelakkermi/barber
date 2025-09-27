@@ -1,10 +1,10 @@
-import Navbar from "../component/Navbar";
-import HeroWrapper from "../component/HeroWrapper";
-import FeaturesClientWrapper from "@/component/FeaturesClientWrapper";
-import Faq from "@/component/Faq";
 import Image from "next/image";
 import textureBg from "../public/images/textureBg.png";
-import { LanguageProvider } from "../component/LanguageProvider";
+import { LanguageProvider } from "@/component/LanguageProvider";
+import Navbar from "@/component/Navbar";
+import HeroWrapper from "@/component/HeroWrapper";
+import FeaturesClientWrapper from "@/component/FeaturesClientWrapper";
+import Faq from "@/component/Faq";
 import FeaturesBarberWrapper from "@/component/FeaturesBarberWrapper";
 import DownloadWrapper from "@/component/DownloadWrapper";
 

@@ -56,7 +56,7 @@ export default function Hero({ lang = "ar" }) {
               src={arrowTitle}
               alt="Arrow Title"
               priority
-              className="object-contain w-full h-full"
+              className="object-contain w-full h-full hidden md:block"
             />
           </div>
 

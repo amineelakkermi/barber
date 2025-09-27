@@ -19,7 +19,6 @@ export function LanguageProvider({ children, initialLang = "ar" }) {
       setLang(newLang);
       if (typeof window !== "undefined") {
         window.localStorage.setItem("lang", newLang);
-        // Dispatch custom event for other components
         window.dispatchEvent(new CustomEvent("languageChange", { 
           detail: { lang: newLang } 
         }));

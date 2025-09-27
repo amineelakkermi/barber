@@ -31,7 +31,6 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
-  // Apply text direction based on language
   useEffect(() => {
     if (typeof document === "undefined") return;
     const dir = lang === "en" ? "ltr" : "rtl";
@@ -66,7 +65,6 @@ export default function Navbar() {
   ];
 
 
-  // Observe sections to update active link
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -101,7 +99,6 @@ export default function Navbar() {
 
     sections.forEach((sec) => observer.observe(sec));
     return () => observer.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const scrollToSection = (id) => {
@@ -200,13 +197,35 @@ export default function Navbar() {
               />
             </a>
 
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-full text-white"
-              aria-label={isOpen ? t.closeMenu : t.openMenu}
-            >
-              {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
-            </button>
+            <div className="flex items-center gap-2">
+              {/* Download Button */}
+              <button
+                className="rounded-full px-4 py-2 text-[14px] font-bold"
+                style={{ backgroundColor: "#E1BD80", color: "#1E1E1E" }}
+                onClick={() => scrollToSection("download")}
+              >
+                {t.downloadBtn}
+              </button>
+              
+              {/* Language Button */}
+              <button
+                onClick={toggleLanguage}
+                className="rounded-full px-3 py-2 text-[12px] font-bold border border-white/30 text-white hover:bg-white/10 transition-colors"
+                aria-label={lang === "ar" ? "تغيير اللغة" : "Change language"}
+                title={lang === "ar" ? "تغيير اللغة" : "Change language"}
+              >
+                {lang === "ar" ? "EN" : "AR"}
+              </button>
+
+              {/* Menu Button */}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 rounded-full text-white"
+                aria-label={isOpen ? t.closeMenu : t.openMenu}
+              >
+                {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
 
           {isOpen && (
@@ -258,6 +277,31 @@ export default function Navbar() {
                         </span>
                       </button>
                     ))}
+                  </div>
+                  
+                  {/* Mobile Action Buttons */}
+                  <div className="mt-8 space-y-3">
+                    <button
+                      className="w-full rounded-full px-6 py-3 text-[16px] font-bold text-center"
+                      style={{ backgroundColor: "#E1BD80", color: "#1E1E1E" }}
+                      onClick={() => {
+                        scrollToSection("download");
+                        setIsOpen(false);
+                      }}
+                    >
+                      {t.downloadBtn}
+                    </button>
+                    
+                    <button
+                      onClick={() => {
+                        toggleLanguage();
+                        setIsOpen(false);
+                      }}
+                      className="w-full rounded-full px-6 py-3 text-[14px] font-bold border border-white/30 text-white hover:bg-white/10 transition-colors"
+                      aria-label={lang === "ar" ? "تغيير اللغة" : "Change language"}
+                    >
+                      {lang === "ar" ? "English" : "العربية"}
+                    </button>
                   </div>
                 </nav>
               </div>
