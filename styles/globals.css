@@ -1,0 +1,53 @@
+/* استيراد الخطوط */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Rubik', sans-serif; /* 👈 استبدال الخط الأساسي */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Rubik', sans-serif; 
+}
+
+.shape1{
+  position: absolute;
+  width: 1259.98px;
+  height: 774.61px;
+  right: 75%;
+  top: 55%;
+  background: #404040;
+  /* Blur - 320 */
+  filter: blur(160px);
+  transform: rotate(-90deg);
+ } 
+ 
+ .shape2{
+  position: absolute;
+  width: 1259.98px;
+  height: 774.61px;
+  left: 75%;
+  top: 65%;
+  background: #404040;
+  /* Blur - 320 */
+  filter: blur(160px);
+  transform: rotate(-90deg);
+ } 
+
+
