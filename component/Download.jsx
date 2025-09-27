@@ -33,7 +33,6 @@ export default function Download({ lang = "ar" }) {
       {/* ====== Container avec backgrounds ====== */}
       <div className="relative w-full max-w-[1250px] flex flex-col gap-5
       justify-center items-center text-center rounded-[40px]
-      mx-12 lg:mx-0
       bg-[#202641] px-6 py-12 md:px-12 lg:py-16
       overflow-hidden">
         
