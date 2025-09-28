@@ -28,7 +28,7 @@ export default function Download({ lang = "ar" }) {
   return (
     <section
       id="download"
-      className={`${styles.padding} flex justify-center items-center`}
+      className={`${styles.padding} bg-[#fff] flex justify-center items-center`}
     >
       {/* Container */}
       <div className="relative w-full max-w-[1250px] flex flex-col gap-5
