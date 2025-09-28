@@ -32,16 +32,9 @@ export default function Hero({ lang = "ar" }) {
       className={`relative overflow-hidden bg-[#202641] flex justify-center items-center w-full min-h-[100vh] ${styles.padding}`}
     >
       {/* Shape */}
-      {lang === "en" ? <>
       <div className="shape1_en" />
       <div className="shape2_en" />
-      </> : 
-      <>
-      <div className="shape1" />
-      <div className="shape2" />
-      </>
       
-      }
 
       {/* Content */}
       <div
@@ -74,7 +67,7 @@ export default function Hero({ lang = "ar" }) {
           {/* Download Buttons */}
           <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start relative">
             {/* Arrow */}
-            <div className={`absolute -top-20 ${lang === "en" ? "-right-32 rotate-90" : "-left-32"} w-[100px] h-[100px]`}>
+            <div className={`absolute -top-20 ${lang === "en" ? "-right-32 rotate-90" : "-left-32 ml-4"} w-[100px] h-[100px]`}>
               <Image
                 src={arrowDownload}
                 alt="Arrow Download"
