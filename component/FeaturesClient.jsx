@@ -9,12 +9,12 @@ import styles, { layout } from "@/styles/style";
 function FeatureCard({ icon, title, text }) {
   return (
     <div
-      className="group lg:max-w-[400px] xl:max-w-[624px] 
-      flex items-center gap-6 px-6 lg:px-8 py-6 
-      rounded-[32px] shadow-md bg-white cursor-pointer 
-      transition-all duration-300 ease-in-out 
-      hover:bg-gradient-to-bl hover:from-[#1E2E56] hover:to-[#4B5791]"
-    >
+    className="group lg:max-w-[400px] xl:max-w-[624px] 
+    flex items-center gap-6 px-6 lg:px-8 py-6 
+    rounded-[32px] shadow-md bg-white cursor-pointer 
+    transition-all duration-300 ease-in-out 
+    hover:bg-gradient-to-bl hover:from-[#1E2E56] hover:to-[#4B5791]"
+  >
       {/* Icône */}
       <div
         className="w-[60px] h-[60px] shrink-0 
@@ -80,13 +80,14 @@ export default function FeaturesClient({ lang = "ar" }) {
       <div
         className={`${layout.sectionRow} ${styles.marginY} 
         max-w-7xl mx-auto z-40 
-        flex justify-start items-center xl:items-end gap-16 xl:gap-0`}
+        flex justify-center items-center gap-16 xl:gap-0`}
       >
+      
         {/* Texte */}
-        <div className={`${layout.sectionInfo}`}>
-          <h1 className={`${styles.title} text-[#202641] max-w-[650px]`}>
-            {t.heading}
-          </h1>
+        <div className={`flex-1 ${styles.flexCenter} flex-col gap-5`}>
+        <h1 className={`${styles.title} text-[#202641] max-w-[650px]`}>
+        {t.heading}
+        </h1>
 
           <div className="flex flex-col gap-4 mt-8">
             <FeatureCard icon={searchIcon} title={t.searchTitle} text={t.searchText} />

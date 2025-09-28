@@ -33,7 +33,8 @@ export default function Hero({ lang = "ar" }) {
     >
       {/* Shape */}
       {lang === "en" ? <>
-        <div className="shape1_en" />
+      <div className="shape1_en" />
+      <div className="shape2_en" />
       </> : 
       <>
       <div className="shape1" />
@@ -44,7 +45,7 @@ export default function Hero({ lang = "ar" }) {
 
       {/* Content */}
       <div
-        className={`${layout.sectionRow} z-40 justify-center items-center max-w-7xl mx-auto`}
+        className={`${layout.sectionRow} z-40 justify-start items-center max-w-7xl mx-auto`}
       >
         {/* Text */}
         <div className={`${layout.sectionInfo} relative`}>
@@ -56,7 +57,7 @@ export default function Hero({ lang = "ar" }) {
               src={arrowTitle}
               alt="Arrow Title"
               priority
-              className="object-contain w-full h-full hidden md:block"
+              className="object-contain w-full h-full hidden xl:block"
             />
           </div>
 

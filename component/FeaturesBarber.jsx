@@ -78,13 +78,13 @@ export default function FeaturesBarber({ lang = "ar" }) {
 
   return (
     <section
-      id="featuresClient"
+      id="featuresBarber"
       className={`relative overflow-hidden bg-white w-full min-h-[100vh] ${styles.padding}`}
     >
       <div
         className={`${layout.sectionReverse} 
         max-w-7xl mx-auto z-40 
-        flex justify-start items-center gap-16 xl:gap-0`}
+        flex justify-center items-center gap-16 xl:gap-0`}
       >
         {/* Mockup */}
         <div className={`${layout.sectionImg} relative`}>
@@ -109,7 +109,7 @@ export default function FeaturesBarber({ lang = "ar" }) {
         </div>
 
          {/* Texte */}
-         <div className={`${layout.sectionInfo}`}>
+         <div className={`flex-1 ${styles.flexCenter} flex-col gap-5`}>
           <h1 className={`${styles.title} text-[#202641] max-w-[650px]`}>
             {t.heading}
           </h1>

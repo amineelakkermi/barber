@@ -34,7 +34,6 @@ body {
   right: 75%;
   top: 55%;
   background: #404040;
-  /* Blur - 320 */
   filter: blur(160px);
   transform: rotate(-90deg);
  } 
@@ -46,9 +45,30 @@ body {
   left: 75%;
   top: 65%;
   background: #404040;
-  /* Blur - 320 */
   filter: blur(160px);
   transform: rotate(-90deg);
  } 
 
+.shape1_en{
+  filter: blur(160px);
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 1259.98px;
+  height: 774.61px;
+  right: 75%;
+  top: 55%;
+  background: linear-gradient(95.62deg, #1E2E56 -14.12%, #4B5791 131.96%), #202641;
+  filter: blur(160px);
+  transform: rotate(-90deg);
+}
+.shape2_en{
+  position: absolute;
+  width: 1259.98px;
+  height: 774.61px;
+  right: 50%;
+  top: 55%;
+  background: linear-gradient(95.62deg, #1E2E56 -14.12%, #4B5791 131.96%), #202641;
+  filter: blur(160px);
+  transform: matrix(0, -1, -1, 0, 0, 0);
 
+}
