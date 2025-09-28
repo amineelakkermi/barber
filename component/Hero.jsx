@@ -29,7 +29,7 @@ export default function Hero({ lang = "ar" }) {
   return (
     <section
       id="hero"
-      className={`relative overflow-hidden bg-[#1c2448] flex justify-center items-center w-full min-h-[100vh] ${styles.padding}`}
+      className={`relative overflow-hidden bg-[#202641] flex justify-center items-center w-full min-h-[100vh] ${styles.padding}`}
     >
       {/* Shape */}
       {lang === "en" ? <>
@@ -109,14 +109,12 @@ export default function Hero({ lang = "ar" }) {
               <Image
                 src={mockup1}
                 alt="App Screen 1"
-                width={312}
-                className="object-cover"
+                className="object-cover w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] xl:max-w-[320px]"
               />
               <Image
                 src={mockup2}
                 alt="App Screen 2"
-                width={312}
-                className="object-cover -ml-[15%]"
+                className="object-cover w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] xl:max-w-[320px] -ml-[15%]"
               />
             </>
           ) : (
@@ -124,14 +122,12 @@ export default function Hero({ lang = "ar" }) {
               <Image
                 src={mockup1}
                 alt="App Screen 1"
-                width={312}
-                className="object-cover"
+                className="object-cover w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] xl:max-w-[320px]"
               />
               <Image
                 src={mockup2}
                 alt="App Screen 2"
-                width={312}
-                className="object-cover -mr-[15%]"
+                className="object-cover w-full max-w-[200px] sm:max-w-[240px] lg:max-w-[280px] xl:max-w-[320px] -mr-[15%]"
               />
             </>
           )}

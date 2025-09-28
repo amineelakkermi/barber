@@ -108,7 +108,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed w-full flex justify-center items-center max-h-[80px] z-50 transition-all duration-300 ${styles.padding} ${
-        isScrolled ? "shadow-md bg-[#1c2448] backdrop-blur" : "bg-transparent"
+        isScrolled ? "shadow-md bg-[#202641] backdrop-blur" : "bg-transparent"
       } overflow-visible`}
     >
       <div className="container max-w-7xl mx-auto">
@@ -228,7 +228,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 aria-hidden="true"
               />
-              <div className="fixed right-0 top-0 h-screen w-80 max-w-[85vw] bg-[#1c2448] border-l border-white/10 p-6 shadow-2xl overflow-y-auto">
+              <div className="fixed right-0 top-0 h-screen w-80 max-w-[85vw] bg-[#202641] border-l border-white/10 p-6 shadow-2xl overflow-y-auto">
                 <div className="flex items-center justify-between w-full">
                   <a
                     href="#hero"
