@@ -32,12 +32,12 @@ const Accordion = () => {
               text: "Yes, the application supports secure and local electronic payment methods, in addition to cash if available from the barber.",
             },
             {
-              header: "2. Can I pay electronically?",
-              text: "Yes, the application supports secure and local electronic payment methods, in addition to cash if available from the barber.",
+              header: "3. Can I modify or cancel my appointment?",
+              text: "You can modify or cancel your appointment within the specified time limit according to the barber's policy.",
             },
             {
-              header: "2. Can I pay electronically?",
-              text: "Yes, the application supports secure and local electronic payment methods, in addition to cash if available from the barber.",
+              header: "4. How can I contact the barber?",
+              text: "You can contact the barber directly through the app via the integrated messaging system, or call them using the phone number available in their profile.",
             },
           ],
         }
