@@ -58,6 +58,7 @@ const Accordion = () => {
             },
             {
               header: "4. كيف أتواصل مع الحلاق؟",
+              text: "يمكنك التواصل مع الحلاق مباشرة من خلال التطبيق عبر نظام الرسائل المدمج، أو الاتصال به عبر رقم الهاتف المتوفر في ملفه الشخصي.",
             },
           ],
         };
@@ -96,10 +97,11 @@ const AccordionItem = ({ header, text, lang }) => {
 
   const rowDir = lang === "en" ? "flex-row text-left" : "flex-row-reverse text-right";
   const iconMargin = lang === "en" ? "mr-5" : "ml-5";
-  const contentAlign = lang === "en" ? "text-left" : "text-right";
+  const headerAlign = lang === "en" ? "text-left" : "text-right";
+  const textAlign = lang === "en" ? "text-left" : "text-right";
 
   return (
-    <div className="mb-8 w-full rounded-[16px] bg-white p-4 shadow-[0px_20px_95px_0px_RGBA(201,203,204,0.30)] border-2 border-[#EEEEEE] sm:p-8 lg:px-6 xl:px-8">
+    <div className="mb-8 w-full rounded-[16px] bg-white p-4 border border-[#EEEEEE] sm:p-4 lg:px-4 xl:px-4" style={{boxSizing: 'border-box', display: 'flex', justifyContent: 'center' , alignItems: 'start' ,   flexDirection: 'column', gap: '10px', maxWidth: '1240px', minHeight: '97px'}}>
       <button className={`faq-btn flex w-full ${rowDir}`} onClick={handleToggle}>
         <div className={`${iconMargin} flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-[#0C0B0B] bg-primary/5 text-[#0C0B0B]`}>
           {active ? (
@@ -113,13 +115,13 @@ const AccordionItem = ({ header, text, lang }) => {
           )}
         </div>
 
-        <div className={`w-full ${contentAlign}`}>
-          <h4 className="mt-1 text-[20px] font-semibold text-[#0C0B0B]">{header}</h4>
+        <div className={`w-full ${headerAlign}`}>
+          <h4 className="text-[20px] font-semibold text-[#0C0B0B]">{header}</h4>
         </div>
       </button>
 
-      <div className={`${contentAlign} duration-200 ease-in-out ${active ? "block" : "hidden"}`}>
-        <p className="py-3 text-[16px] font-normal leading-relaxed text-[#7E7E7E]">{text}</p>
+      <div className={`${textAlign} duration-200 ease-in-out ${active ? "block" : "hidden"}`}>
+        <p className="text-[16px] font-normal leading-relaxed text-[#7E7E7E]">{text}</p>
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ export default function Hero({ lang = "ar" }) {
   return (
     <section
       id="hero"
-      className={`relative overflow-hidden bg-[#202641] flex justify-center items-center w-full min-h-[100vh] ${styles.padding}`}
+      className={`relative overflow-hidden bg-[#1c2448] flex justify-center items-center w-full min-h-[100vh] ${styles.padding}`}
     >
       {/* Shape */}
       {lang === "en" ? <>

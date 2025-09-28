@@ -31,7 +31,7 @@ body {
   position: absolute;
   width: 1259.98px;
   height: 774.61px;
-  right: 75%;
+  right: 70%;
   top: 55%;
   background: #404040;
   filter: blur(160px);
@@ -70,5 +70,19 @@ body {
   background: linear-gradient(95.62deg, #1E2E56 -14.12%, #4B5791 131.96%), #202641;
   filter: blur(160px);
   transform: matrix(0, -1, -1, 0, 0, 0);
+
+}
+
+
+.shape_download_container{
+position: absolute;
+width: 1259.98px;
+height: 774.61px;
+left: -65%;
+top: 100%;
+background: linear-gradient(95.62deg, #1E2E56 -14.12%, #4B5791 131.96%), #202641;
+filter: blur(160px);
+transform: matrix(0, -1, -1, 0, 0, 0);
+color: #1c2448;
 
 }

@@ -108,7 +108,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed w-full flex justify-center items-center max-h-[80px] z-50 transition-all duration-300 ${styles.padding} ${
-        isScrolled ? "shadow-md bg-[#202641] backdrop-blur" : "bg-transparent"
+        isScrolled ? "shadow-md bg-[#1c2448] backdrop-blur" : "bg-transparent"
       } overflow-visible`}
     >
       <div className="container max-w-7xl mx-auto">
@@ -140,7 +140,7 @@ export default function Navbar() {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`${
-                  activeSection === item.id ? "text-white" : "text-white/80"
+                  activeSection === item.id ? "text-[#E1BD80]" : "text-white"
                 } cursor-pointer text-base font-medium transition-colors hover:text-white`}
               >
                 <span className={`${activeSection === item.id ? "nav-link nav-link--active" : "nav-link"}`}>
@@ -228,7 +228,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 aria-hidden="true"
               />
-              <div className="fixed right-0 top-0 h-screen w-80 max-w-[85vw] bg-[#202641] border-l border-white/10 p-6 shadow-2xl overflow-y-auto">
+              <div className="fixed right-0 top-0 h-screen w-80 max-w-[85vw] bg-[#1c2448] border-l border-white/10 p-6 shadow-2xl overflow-y-auto">
                 <div className="flex items-center justify-between w-full">
                   <a
                     href="#hero"
@@ -262,7 +262,7 @@ export default function Navbar() {
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
                         className={`w-full text-right ${
-                          activeSection === item.id ? "text-white" : "text-white/90"
+                          activeSection === item.id ? "text-[#E1BD80]" : "text-white"
                         } py-3 px-2 rounded-lg transition-all duration-300 hover:bg-white/10`}
                       >
                         <span className={`${activeSection === item.id ? "nav-link nav-link--active" : "nav-link"}`}>

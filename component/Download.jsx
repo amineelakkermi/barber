@@ -47,30 +47,16 @@ export default function Download({ lang = "ar" }) {
           />
         </div>
 
-       
+        <div className="shape_download_container z-0" />
 
-        {/* Shape */}
-        <div
-          className="absolute z-20"
-          style={{
-            width: "100%",
-            height: "100%",
-            left: "-75%",
-            top: "85%",
-            background:
-              "linear-gradient(95.62deg, #1E2E56 -14.12%, #4B5791 131.96%), #202641",
-            filter: "blur(160px)",
-            transform: "rotate(-90deg)",
-          }}
-        />
 
         {/* Title && Text */}
-        <h1 className={`${styles.title} max-w-[650px] text-white`}>{t.title}</h1>
-        <p className={`${styles.paragraph} max-w-[650px] text-white`}>{t.p1}</p>
-        <p className={`${styles.paragraph} max-w-[650px] text-white`}>{t.p2}</p>
+        <h1 className={`${styles.title} max-w-[650px] z-20 text-white`}>{t.title}</h1>
+        <p className={`${styles.paragraph} max-w-[650px] z-20 text-white`}>{t.p1}</p>
+        <p className={`${styles.paragraph} max-w-[650px] z-20 text-white`}>{t.p2}</p>
 
         {/* Download Buttons */}
-        <div className="flex gap-4 flex-wrap justify-center">
+        <div className="flex gap-4 flex-wrap justify-center z-20">
           <a
             href="#"
             className="block duration-300 hover:scale-105 transition-transform"
