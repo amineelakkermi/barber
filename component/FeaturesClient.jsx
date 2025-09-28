@@ -105,7 +105,7 @@ export default function FeaturesClient({ lang = "ar" }) {
   const t =
     lang === "en"
       ? {
-          heading: " 👤 For the customer – Book your barber anytime, anywhere",
+          heading: "  For the customer – Book your barber anytime, anywhere",
           searchTitle: "Search easily",
           searchText: "View the list of barbers by location, rating, or type of service.",
           reserveTitle: "Book within seconds",
@@ -116,7 +116,7 @@ export default function FeaturesClient({ lang = "ar" }) {
           starText: "Read user experiences to choose with confidence.",
         }
       : {
-          heading: "👤 للعميل – احجز حلاقك في أي وقت ومن أي مكان",
+          heading: "للعميل – احجز حلاقك في أي وقت ومن أي مكان",
           searchTitle: "ابحث بسهولة",
           searchText: "استعرض قائمة الحلاقين حسب الموقع، التقييم، أو نوع الخدمة.",
           reserveTitle: "احجز خلال ثوانٍ",

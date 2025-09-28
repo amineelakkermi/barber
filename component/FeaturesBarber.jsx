@@ -104,7 +104,7 @@ export default function FeaturesBarber({ lang = "ar" }) {
   const t =
     lang === "en"
       ? {
-          heading: " 💈 Barber – Organize your appointments and increase your customers",
+          heading: " Barber – Organize your appointments and increase your customers",
           reserveTitle: "Receive orders instantly",
           reserveText: "Activate your account and start receiving bookings near you.",
           checkTitle: "Manage appointments easily",
@@ -115,7 +115,7 @@ export default function FeaturesBarber({ lang = "ar" }) {
           moneyText: " Get daily and weekly reports of your earnings.",
         }
       : {
-          heading: "💈 للحلاق – نظّم مواعيدك وزِد عملاءك",
+          heading: " للحلاق – نظّم مواعيدك وزِد عملاءك",
           reserveTitle: "استقبل الطلبات فورًا",
           reserveText: "فعّل حسابك وابدأ بتلقي الحجوزات القريبة منك.",
           checkTitle: "إدارة المواعيد بسهولة",

@@ -15,12 +15,12 @@ export default function Download({ lang = "ar" }) {
   const t =
     lang === "en"
       ? {
-          title: " 📥 Download the app now and start your experience",
+          title: " Download the app now and start your experience",
           p1: "Join thousands of users who have chosen comfort and professionalism.",
           p2: "Whether you're a customer looking for premium service, or a barber looking to expand your business — our app is built for you.",
         }
       : {
-          title: "📥 حمّل التطبيق الآن وابدأ تجربتك",
+          title: "حمّل التطبيق الآن وابدأ تجربتك",
           p1: "انضم لآلاف المستخدمين الذين اختاروا الراحة والاحترافية.",
           p2: "سواء كنت عميلًا تبحث عن خدمة مميزة، أو حلاقًا تسعى لتوسيع عملك — تطبيقنا صُمم من أجلك.",
         };
