@@ -3,7 +3,12 @@ import Footer from "../component/Footer";
 
 export const metadata = {
   title: "BarberApp",
-  description: "Réservation et gestion de rendez-vous pour barbiers",
+  description: "تطبيق حجز وإدارة المواعيد للحلاقين",
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
