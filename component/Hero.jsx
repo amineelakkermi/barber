@@ -67,7 +67,7 @@ export default function Hero({ lang = "ar" }) {
           {/* Download Buttons */}
           <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start relative">
             {/* Arrow */}
-            <div className={`absolute -top-20 ${lang === "en" ? "-right-32 rotate-90" : "-left-32 ml-4"} w-[100px] h-[100px]`}>
+            <div className={`absolute -top-20 ${lang === "en" ? "-right-32 rotate-90" : "-left-32 ml-4 hidden md:block"} w-[100px] h-[100px]`}>
               <Image
                 src={arrowDownload}
                 alt="Arrow Download"
