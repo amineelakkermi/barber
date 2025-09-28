@@ -6,7 +6,6 @@ import { FiMail, FiPhone } from "react-icons/fi";
 
 const Footer = () => {
   const scrollToSection = (id) => {
-    // Remove any leading slash or hash
     const cleanId = id.replace(/^[\/#]+/, '');
     const el = document.getElementById(cleanId);
     if (el) {
