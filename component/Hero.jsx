@@ -44,13 +44,13 @@ export default function Hero({ lang = "ar" }) {
         <div className={`${layout.sectionInfo} relative`}>
           {/* Arrow */}
           <div
-            className={`absolute top-8 xl:top-16 ${lang === "en" ? "right-8 xl:right-20 rotate-90" : "left-8 xl:left-20"} w-[50px] h-[50px]`}
+            className={`absolute hidden lg:block top-8 xl:top-16 ${lang === "en" ? "right-8 xl:right-20 rotate-90" : "left-8 xl:left-20"} w-[50px] h-[50px]`}
           >
             <Image
               src={arrowTitle}
               alt="Arrow Title"
               priority
-              className="object-contain w-full h-full hidden xl:block"
+              className="object-contain w-full h-full "
             />
           </div>
 
@@ -67,7 +67,7 @@ export default function Hero({ lang = "ar" }) {
           {/* Download Buttons */}
           <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start relative">
             {/* Arrow */}
-            <div className={`absolute -top-20 ${lang === "en" ? "-right-32 rotate-90" : "-left-4 md:-left-28"} w-[100px] h-[100px]`}>
+            <div className={`absolute hidden lg:block -top-20 ${lang === "en" ? "-right-32 rotate-90" : "-left-28"} w-[100px] h-[100px]`}>
               <Image
                 src={arrowDownload}
                 alt="Arrow Download"
@@ -96,7 +96,7 @@ export default function Hero({ lang = "ar" }) {
         </div>
 
         {/* Mockups */}
-        <div className={`${layout.sectionImg} relative`}>
+        <div className={`${layout.sectionImg} ${lang === "en" ? "lg:ml-10 ml-0" : "lg:mr-10 mr-0"} relative`}>
           {lang === "en" ? (
             <>
               <Image
